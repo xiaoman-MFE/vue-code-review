@@ -37,6 +37,11 @@ console.log(a.x); // 输出 undefined
   - 定义了 Array 的观测 重写 push pop ..原生方法每次操作后 会 link unlink 相应元素
   - 针对Object 用walk 给每一个key加上ob 观测
   
+>branch 0.10 871ed91 commit@ 07/29/2013
+最初的逻辑 
+给所有 {{}} 做一次带attr标记的替换 
+然后利用这些标记建立 bindings[variable].els 管理数组
+defineProperty set时候 将值赋给textContent
 
 
 
